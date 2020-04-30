@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    #阿里云mysql密码和账户
+    password: root
+    #url: jdbc:mysql://127.0.0.1:3306/yiwan?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://47.116.117.105:3306/yiwan?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    #支持（评论）存储表情
+    hikari:
+      connection-init-sql: set names utf8mb4
+    tomcat:
+      init-s-q-l: SET NAMES utf8mb4
+  #jpa配置
+  jpa:
+    hibernate:
+      #会根据映射实体类 自动创建或更新数据库
+      ddl-auto: update
+    #控制台打印sql
+    show-sql: true
